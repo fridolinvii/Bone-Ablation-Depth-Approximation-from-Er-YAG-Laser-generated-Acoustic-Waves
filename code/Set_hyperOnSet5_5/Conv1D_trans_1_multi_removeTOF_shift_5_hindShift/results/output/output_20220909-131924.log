@@ -1,0 +1,1095 @@
+{'L2_reguralization': 0,
+ 'activation': 'relu',
+ 'alpha': 0.4,
+ 'amplitude_shift': 0.5,
+ 'batch_size': 32,
+ 'conv_layer_1_batchnorm': {'name': True},
+ 'conv_layer_1_channels_out': 32,
+ 'conv_layer_1_extras': 'name',
+ 'conv_layer_1_kernel_size': 4,
+ 'conv_layer_1_kernel_size_maxpool': 3,
+ 'conv_layer_1_strides': 1,
+ 'conv_layer_1_strides_maxpool': 2,
+ 'conv_layer_2_batchnorm': {'name': False},
+ 'conv_layer_2_channels_out': 64,
+ 'conv_layer_2_extras': 'name',
+ 'conv_layer_2_kernel_size': 4,
+ 'conv_layer_2_kernel_size_maxpool': 3,
+ 'conv_layer_2_strides': 2,
+ 'conv_layer_2_strides_maxpool': 2,
+ 'conv_layer_3_batchnorm': {'name': False},
+ 'conv_layer_3_channels_out': 8,
+ 'conv_layer_3_extras': 'name',
+ 'conv_layer_3_kernel_size': 4,
+ 'conv_layer_3_kernel_size_maxpool': 2,
+ 'conv_layer_3_strides': 1,
+ 'conv_layer_3_strides_maxpool': 1,
+ 'conv_layer_4_batchnorm': {'name': False},
+ 'conv_layer_4_channels_out': 256,
+ 'conv_layer_4_extras': 'name',
+ 'conv_layer_4_kernel_size': 5,
+ 'conv_layer_4_kernel_size_maxpool': 3,
+ 'conv_layer_4_strides': 2,
+ 'conv_layer_4_strides_maxpool': 2,
+ 'conv_layer_5_batchnorm': {'name': True},
+ 'conv_layer_5_channels_out': 256,
+ 'conv_layer_5_extras': 'name',
+ 'conv_layer_5_kernel_size': 4,
+ 'conv_layer_5_kernel_size_maxpool': 2,
+ 'conv_layer_5_strides': 2,
+ 'conv_layer_5_strides_maxpool': 1,
+ 'conv_layer_6_batchnorm': {'name': False},
+ 'conv_layer_6_channels_out': 256,
+ 'conv_layer_6_extras': 'name',
+ 'conv_layer_6_kernel_size': 3,
+ 'conv_layer_6_kernel_size_maxpool': 3,
+ 'conv_layer_6_strides': 2,
+ 'conv_layer_6_strides_maxpool': 1,
+ 'conv_layer_7_batchnorm': {'name': False},
+ 'conv_layer_7_channels_out': 8,
+ 'conv_layer_7_extras': 'name',
+ 'conv_layer_7_kernel_size': 4,
+ 'conv_layer_7_kernel_size_maxpool': 2,
+ 'conv_layer_7_strides': 1,
+ 'conv_layer_7_strides_maxpool': 1,
+ 'conv_layer_8_batchnorm': {'name': True},
+ 'conv_layer_8_channels_out': 128,
+ 'conv_layer_8_extras': 'name',
+ 'conv_layer_8_kernel_size': 2,
+ 'conv_layer_8_kernel_size_maxpool': 3,
+ 'conv_layer_8_strides': 2,
+ 'conv_layer_8_strides_maxpool': 1,
+ 'conv_layer_9_batchnorm': {'name': False},
+ 'conv_layer_9_channels_out': 4,
+ 'conv_layer_9_extras': 'name',
+ 'conv_layer_9_kernel_size': 3,
+ 'conv_layer_9_kernel_size_maxpool': 3,
+ 'conv_layer_9_strides': 2,
+ 'conv_layer_9_strides_maxpool': 2,
+ 'conv_order': True,
+ 'depthShift': 3,
+ 'depthShift_sigma': 0.5,
+ 'fc_layer_1_batchnorm': {'name': True},
+ 'fc_layer_1_extras': {'name': 'dropout', 'rate': 0.4853609126406153},
+ 'fc_layer_2_batchnorm': {'name': True},
+ 'fc_layer_2_extras': {'name': None},
+ 'fc_layer_3_batchnorm': {'name': True},
+ 'fc_layer_3_extras': {'name': None},
+ 'fc_layer_4_batchnorm': {'name': True},
+ 'fc_layer_4_extras': {'name': 'dropout', 'rate': 0.5430694454362267},
+ 'fc_layer_5_batchnorm': {'name': False},
+ 'fc_layer_5_extras': {'name': 'dropout', 'rate': 0.4345536297888637},
+ 'fc_layer_6_batchnorm': {'name': True},
+ 'fc_layer_6_extras': {'name': 'dropout', 'rate': 0.5623788320304374},
+ 'fc_layer_7_batchnorm': {'name': True},
+ 'fc_layer_7_extras': {'name': 'dropout', 'rate': 0.1990679240917643},
+ 'fc_layer_8_batchnorm': {'name': True},
+ 'fc_layer_8_extras': {'name': 'dropout', 'rate': 0.20916768471525574},
+ 'fc_layer_9_batchnorm': {'name': True},
+ 'fc_layer_9_extras': {'name': None},
+ 'init': 'standard',
+ 'input_size': 2000,
+ 'learnin_rate': 0.001,
+ 'margin': 0.1,
+ 'n_conv_layers': 5,
+ 'n_fc_layers': 8,
+ 'neurons': 1028,
+ 'numberOfShots': 4,
+ 'optimizer': 'Adam'}
+
+500
+Load data...
+Number of spectra in the data set 1641
+Number of spectra in the data set 603
+Done!
+
+cuda:0
+ParametricConvFCModel(
+  (seq_layers): ModuleDict(
+    (0): BatchNorm1d(5, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): Conv1d(5, 8, kernel_size=(4,), stride=(1,))
+    (2): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv1d(8, 32, kernel_size=(4,), stride=(2,))
+    (4): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv1d(32, 64, kernel_size=(4,), stride=(1,))
+    (6): MaxPool1d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv1d(64, 256, kernel_size=(5,), stride=(2,))
+    (8): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv1d(256, 256, kernel_size=(4,), stride=(2,))
+    (11): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): MaxPool1d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+    (13): Dropout(p=0.4853609126406153, inplace=False)
+    (14): Linear(in_features=6912, out_features=1028, bias=True)
+    (15): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): Linear(in_features=1028, out_features=1028, bias=True)
+    (17): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): Linear(in_features=1028, out_features=1028, bias=True)
+    (19): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (20): Dropout(p=0.5430694454362267, inplace=False)
+    (21): Linear(in_features=1028, out_features=1028, bias=True)
+    (22): Dropout(p=0.4345536297888637, inplace=False)
+    (23): Linear(in_features=1028, out_features=1028, bias=True)
+    (24): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (25): Dropout(p=0.5623788320304374, inplace=False)
+    (26): Linear(in_features=1028, out_features=1028, bias=True)
+    (27): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (28): Dropout(p=0.1990679240917643, inplace=False)
+    (29): Linear(in_features=1028, out_features=1028, bias=True)
+    (30): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (31): Dropout(p=0.20916768471525574, inplace=False)
+    (32): Linear(in_features=1028, out_features=1028, bias=True)
+    (33): Linear(in_features=1028, out_features=1, bias=True)
+  )
+)
+****************************************************
+************* epoch  0 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 3.0030336380004883
+loss function at mini-batch iteration 10 : 0.6405305862426758
+loss function at mini-batch iteration 20 : 0.28250646591186523
+loss function at mini-batch iteration 30 : 0.39917173981666565
+loss function at mini-batch iteration 40 : 0.14366081357002258
+loss function at mini-batch iteration 50 : 0.22136905789375305
+mean loss: 24.320640563964844
+***************************
+********* Validate ************
+***************************
+mean loss: 0.3063838481903076
+****************************************************
+************* epoch  1 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.2931033968925476
+loss function at mini-batch iteration 10 : 0.947351336479187
+loss function at mini-batch iteration 20 : 0.2995244562625885
+loss function at mini-batch iteration 30 : 0.13943645358085632
+loss function at mini-batch iteration 40 : 0.32884523272514343
+loss function at mini-batch iteration 50 : 0.1607133150100708
+mean loss: 10.396346092224121
+***************************
+********* Validate ************
+***************************
+mean loss: 0.6303074955940247
+****************************************************
+************* epoch  2 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.13987623155117035
+loss function at mini-batch iteration 10 : 0.30000799894332886
+loss function at mini-batch iteration 20 : 0.16911457479000092
+loss function at mini-batch iteration 30 : 0.2432965189218521
+loss function at mini-batch iteration 40 : 0.30085501074790955
+loss function at mini-batch iteration 50 : 0.5666377544403076
+mean loss: 8.541206359863281
+***************************
+********* Validate ************
+***************************
+mean loss: 0.10551036149263382
+****************************************************
+************* epoch  3 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.1936301738023758
+loss function at mini-batch iteration 10 : 0.4643714725971222
+loss function at mini-batch iteration 20 : 0.6206403970718384
+loss function at mini-batch iteration 30 : 0.4620899558067322
+loss function at mini-batch iteration 40 : 0.30459165573120117
+loss function at mini-batch iteration 50 : 0.11432407796382904
+mean loss: 11.497618675231934
+***************************
+********* Validate ************
+***************************
+mean loss: 0.2069951444864273
+****************************************************
+************* epoch  4 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.32815003395080566
+loss function at mini-batch iteration 10 : 0.05818875879049301
+loss function at mini-batch iteration 20 : 0.10492809116840363
+loss function at mini-batch iteration 30 : 0.13230928778648376
+loss function at mini-batch iteration 40 : 0.19774672389030457
+loss function at mini-batch iteration 50 : 0.19423161447048187
+mean loss: 5.094123840332031
+***************************
+********* Validate ************
+***************************
+mean loss: 0.1534942388534546
+****************************************************
+************* epoch  5 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.06379435956478119
+loss function at mini-batch iteration 10 : 0.1884250044822693
+loss function at mini-batch iteration 20 : 0.2169497013092041
+loss function at mini-batch iteration 30 : 0.16873514652252197
+loss function at mini-batch iteration 40 : 0.12201958894729614
+loss function at mini-batch iteration 50 : 0.11386004835367203
+mean loss: 5.416088581085205
+***************************
+********* Validate ************
+***************************
+mean loss: 0.046514205634593964
+****************************************************
+************* epoch  6 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0665324404835701
+loss function at mini-batch iteration 10 : 0.12648166716098785
+loss function at mini-batch iteration 20 : 0.14074724912643433
+loss function at mini-batch iteration 30 : 0.16741196811199188
+loss function at mini-batch iteration 40 : 0.26016765832901
+loss function at mini-batch iteration 50 : 0.22179555892944336
+mean loss: 5.653527736663818
+***************************
+********* Validate ************
+***************************
+mean loss: 0.2653008997440338
+****************************************************
+************* epoch  7 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0995912253856659
+loss function at mini-batch iteration 10 : 0.2003323882818222
+loss function at mini-batch iteration 20 : 0.46289199590682983
+loss function at mini-batch iteration 30 : 0.18118983507156372
+loss function at mini-batch iteration 40 : 0.041954874992370605
+loss function at mini-batch iteration 50 : 0.11982232332229614
+mean loss: 5.361745357513428
+***************************
+********* Validate ************
+***************************
+mean loss: 0.1622321754693985
+****************************************************
+************* epoch  8 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.17647570371627808
+loss function at mini-batch iteration 10 : 0.08486316353082657
+loss function at mini-batch iteration 20 : 0.19201317429542542
+loss function at mini-batch iteration 30 : 0.08972464501857758
+loss function at mini-batch iteration 40 : 0.14313910901546478
+loss function at mini-batch iteration 50 : 0.13045315444469452
+mean loss: 4.368191719055176
+***************************
+********* Validate ************
+***************************
+mean loss: 0.0453772097826004
+****************************************************
+************* epoch  9 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.169274240732193
+loss function at mini-batch iteration 10 : 0.23299799859523773
+loss function at mini-batch iteration 20 : 0.21956481039524078
+loss function at mini-batch iteration 30 : 0.0600583553314209
+loss function at mini-batch iteration 40 : 0.32749736309051514
+loss function at mini-batch iteration 50 : 0.4479331374168396
+mean loss: 5.076730251312256
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03744998201727867
+****************************************************
+************* epoch  10 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.15620526671409607
+loss function at mini-batch iteration 10 : 0.06970680505037308
+loss function at mini-batch iteration 20 : 0.13404592871665955
+loss function at mini-batch iteration 30 : 0.1254822015762329
+loss function at mini-batch iteration 40 : 0.08616027235984802
+loss function at mini-batch iteration 50 : 0.174256831407547
+mean loss: 3.7363197803497314
+***************************
+********* Validate ************
+***************************
+mean loss: 0.041175391525030136
+****************************************************
+************* epoch  11 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.12200340628623962
+loss function at mini-batch iteration 10 : 0.1104077696800232
+loss function at mini-batch iteration 20 : 0.12576277554035187
+loss function at mini-batch iteration 30 : 0.08524209260940552
+loss function at mini-batch iteration 40 : 0.12342613190412521
+loss function at mini-batch iteration 50 : 0.06743127107620239
+mean loss: 4.636140823364258
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05327850207686424
+****************************************************
+************* epoch  12 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.24531953036785126
+loss function at mini-batch iteration 10 : 0.13922134041786194
+loss function at mini-batch iteration 20 : 0.11876993626356125
+loss function at mini-batch iteration 30 : 0.09200641512870789
+loss function at mini-batch iteration 40 : 0.2651826739311218
+loss function at mini-batch iteration 50 : 0.2438618540763855
+mean loss: 3.682605266571045
+***************************
+********* Validate ************
+***************************
+mean loss: 0.053338032215833664
+****************************************************
+************* epoch  13 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.12749354541301727
+loss function at mini-batch iteration 10 : 0.1657237410545349
+loss function at mini-batch iteration 20 : 0.3570086658000946
+loss function at mini-batch iteration 30 : 0.08669020235538483
+loss function at mini-batch iteration 40 : 0.18165349960327148
+loss function at mini-batch iteration 50 : 0.12163577228784561
+mean loss: 4.567419052124023
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04312492534518242
+****************************************************
+************* epoch  14 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.12073971331119537
+loss function at mini-batch iteration 10 : 0.17747846245765686
+loss function at mini-batch iteration 20 : 0.1426306962966919
+loss function at mini-batch iteration 30 : 0.08849021047353745
+loss function at mini-batch iteration 40 : 0.2994294762611389
+loss function at mini-batch iteration 50 : 0.04808029532432556
+mean loss: 4.63997745513916
+***************************
+********* Validate ************
+***************************
+mean loss: 0.10159242898225784
+****************************************************
+************* epoch  15 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.1274518370628357
+loss function at mini-batch iteration 10 : 0.06771242618560791
+loss function at mini-batch iteration 20 : 0.05541703850030899
+loss function at mini-batch iteration 30 : 0.12668900191783905
+loss function at mini-batch iteration 40 : 0.18624776601791382
+loss function at mini-batch iteration 50 : 0.07335600256919861
+mean loss: 2.972067356109619
+***************************
+********* Validate ************
+***************************
+mean loss: 0.0452088937163353
+****************************************************
+************* epoch  16 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.1168573647737503
+loss function at mini-batch iteration 10 : 0.06888868659734726
+loss function at mini-batch iteration 20 : 0.16522985696792603
+loss function at mini-batch iteration 30 : 0.09095810353755951
+loss function at mini-batch iteration 40 : 0.07991188764572144
+loss function at mini-batch iteration 50 : 0.12396864593029022
+mean loss: 3.148376941680908
+***************************
+********* Validate ************
+***************************
+mean loss: 0.042030226439237595
+****************************************************
+************* epoch  17 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0779656320810318
+loss function at mini-batch iteration 10 : 0.08837951719760895
+loss function at mini-batch iteration 20 : 0.12619639933109283
+loss function at mini-batch iteration 30 : 0.051870428025722504
+loss function at mini-batch iteration 40 : 0.057455964386463165
+loss function at mini-batch iteration 50 : 0.08694687485694885
+mean loss: 3.265627861022949
+***************************
+********* Validate ************
+***************************
+mean loss: 0.1364477425813675
+****************************************************
+************* epoch  18 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.08969429135322571
+loss function at mini-batch iteration 10 : 0.09931309521198273
+loss function at mini-batch iteration 20 : 0.058284785598516464
+loss function at mini-batch iteration 30 : 0.15723545849323273
+loss function at mini-batch iteration 40 : 0.04740477353334427
+loss function at mini-batch iteration 50 : 0.06406794488430023
+mean loss: 3.2884130477905273
+***************************
+********* Validate ************
+***************************
+mean loss: 0.0432264618575573
+****************************************************
+************* epoch  19 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.451601505279541
+loss function at mini-batch iteration 10 : 0.16279451549053192
+loss function at mini-batch iteration 20 : 0.06853324919939041
+loss function at mini-batch iteration 30 : 0.060788169503211975
+loss function at mini-batch iteration 40 : 0.07650978118181229
+loss function at mini-batch iteration 50 : 0.059260785579681396
+mean loss: 3.446401834487915
+***************************
+********* Validate ************
+***************************
+mean loss: 0.058029625564813614
+****************************************************
+************* epoch  20 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.14304199814796448
+loss function at mini-batch iteration 10 : 0.26243698596954346
+loss function at mini-batch iteration 20 : 0.06712888181209564
+loss function at mini-batch iteration 30 : 0.05491749197244644
+loss function at mini-batch iteration 40 : 0.12216605246067047
+loss function at mini-batch iteration 50 : 0.061312876641750336
+mean loss: 2.9218451976776123
+***************************
+********* Validate ************
+***************************
+mean loss: 0.08605969697237015
+****************************************************
+************* epoch  21 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.05489881709218025
+loss function at mini-batch iteration 10 : 0.09296905994415283
+loss function at mini-batch iteration 20 : 0.0645003616809845
+loss function at mini-batch iteration 30 : 0.10903684049844742
+loss function at mini-batch iteration 40 : 0.07187220454216003
+loss function at mini-batch iteration 50 : 0.09684312343597412
+mean loss: 3.517158269882202
+***************************
+********* Validate ************
+***************************
+mean loss: 0.057083338499069214
+****************************************************
+************* epoch  22 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.06851698458194733
+loss function at mini-batch iteration 10 : 0.0704558789730072
+loss function at mini-batch iteration 20 : 0.04786285012960434
+loss function at mini-batch iteration 30 : 0.09960054606199265
+loss function at mini-batch iteration 40 : 0.07712183892726898
+loss function at mini-batch iteration 50 : 0.10034258663654327
+mean loss: 2.5820958614349365
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03586835414171219
+****************************************************
+************* epoch  23 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.16676606237888336
+loss function at mini-batch iteration 10 : 0.05353774130344391
+loss function at mini-batch iteration 20 : 0.06498146802186966
+loss function at mini-batch iteration 30 : 0.11090423166751862
+loss function at mini-batch iteration 40 : 0.1061161682009697
+loss function at mini-batch iteration 50 : 0.05122750997543335
+mean loss: 2.5690622329711914
+***************************
+********* Validate ************
+***************************
+mean loss: 0.1203983873128891
+****************************************************
+************* epoch  24 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.07077638804912567
+loss function at mini-batch iteration 10 : 0.0865941122174263
+loss function at mini-batch iteration 20 : 0.06996090710163116
+loss function at mini-batch iteration 30 : 0.05394624546170235
+loss function at mini-batch iteration 40 : 0.08983410894870758
+loss function at mini-batch iteration 50 : 0.04190225526690483
+mean loss: 2.2466156482696533
+***************************
+********* Validate ************
+***************************
+mean loss: 0.039106518030166626
+****************************************************
+************* epoch  25 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.10503029823303223
+loss function at mini-batch iteration 10 : 0.042555179446935654
+loss function at mini-batch iteration 20 : 0.04331246390938759
+loss function at mini-batch iteration 30 : 0.07199801504611969
+loss function at mini-batch iteration 40 : 0.052681148052215576
+loss function at mini-batch iteration 50 : 0.09189321845769882
+mean loss: 2.2490389347076416
+***************************
+********* Validate ************
+***************************
+mean loss: 0.06375233083963394
+****************************************************
+************* epoch  26 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.09864883869886398
+loss function at mini-batch iteration 10 : 0.10471650958061218
+loss function at mini-batch iteration 20 : 0.0807984247803688
+loss function at mini-batch iteration 30 : 0.07387299835681915
+loss function at mini-batch iteration 40 : 0.19665855169296265
+loss function at mini-batch iteration 50 : 0.06383833289146423
+mean loss: 3.2177135944366455
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05283937230706215
+****************************************************
+************* epoch  27 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.08136337250471115
+loss function at mini-batch iteration 10 : 0.08039119839668274
+loss function at mini-batch iteration 20 : 0.07060584425926208
+loss function at mini-batch iteration 30 : 0.019596830010414124
+loss function at mini-batch iteration 40 : 0.05833090841770172
+loss function at mini-batch iteration 50 : 0.042964667081832886
+mean loss: 2.5190224647521973
+***************************
+********* Validate ************
+***************************
+mean loss: 0.07403363287448883
+****************************************************
+************* epoch  28 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.14030764997005463
+loss function at mini-batch iteration 10 : 0.0586819127202034
+loss function at mini-batch iteration 20 : 0.07829849421977997
+loss function at mini-batch iteration 30 : 0.08130712807178497
+loss function at mini-batch iteration 40 : 0.15352971851825714
+loss function at mini-batch iteration 50 : 0.06028389930725098
+mean loss: 2.768596649169922
+***************************
+********* Validate ************
+***************************
+mean loss: 0.045945633202791214
+****************************************************
+************* epoch  29 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.11695297807455063
+loss function at mini-batch iteration 10 : 0.07817166298627853
+loss function at mini-batch iteration 20 : 0.046580150723457336
+loss function at mini-batch iteration 30 : 0.04404562711715698
+loss function at mini-batch iteration 40 : 0.12338967621326447
+loss function at mini-batch iteration 50 : 0.06775319576263428
+mean loss: 2.4955639839172363
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04506737366318703
+****************************************************
+************* epoch  30 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.04431960731744766
+loss function at mini-batch iteration 10 : 0.06628328561782837
+loss function at mini-batch iteration 20 : 0.06947033852338791
+loss function at mini-batch iteration 30 : 0.0611247792840004
+loss function at mini-batch iteration 40 : 0.058600910007953644
+loss function at mini-batch iteration 50 : 0.037272676825523376
+mean loss: 2.112252712249756
+***************************
+********* Validate ************
+***************************
+mean loss: 0.06628973037004471
+****************************************************
+************* epoch  31 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.06984077394008636
+loss function at mini-batch iteration 10 : 0.06473560631275177
+loss function at mini-batch iteration 20 : 0.15781031548976898
+loss function at mini-batch iteration 30 : 0.0232592411339283
+loss function at mini-batch iteration 40 : 0.09894736111164093
+loss function at mini-batch iteration 50 : 0.10003706812858582
+mean loss: 2.3952953815460205
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03955504670739174
+****************************************************
+************* epoch  32 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.2057073712348938
+loss function at mini-batch iteration 10 : 0.05992914363741875
+loss function at mini-batch iteration 20 : 0.10142232477664948
+loss function at mini-batch iteration 30 : 0.09192097932100296
+loss function at mini-batch iteration 40 : 0.06304042041301727
+loss function at mini-batch iteration 50 : 0.021233797073364258
+mean loss: 2.2869091033935547
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03527407720685005
+****************************************************
+************* epoch  33 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.06999997049570084
+loss function at mini-batch iteration 10 : 0.10783252120018005
+loss function at mini-batch iteration 20 : 0.04883183538913727
+loss function at mini-batch iteration 30 : 0.05359320342540741
+loss function at mini-batch iteration 40 : 0.037761151790618896
+loss function at mini-batch iteration 50 : 0.15192531049251556
+mean loss: 2.023386001586914
+***************************
+********* Validate ************
+***************************
+mean loss: 0.14406520128250122
+****************************************************
+************* epoch  34 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.1448490172624588
+loss function at mini-batch iteration 10 : 0.07408274710178375
+loss function at mini-batch iteration 20 : 0.06043194606900215
+loss function at mini-batch iteration 30 : 0.041684553027153015
+loss function at mini-batch iteration 40 : 0.07283911854028702
+loss function at mini-batch iteration 50 : 0.06390918791294098
+mean loss: 1.91698157787323
+***************************
+********* Validate ************
+***************************
+mean loss: 0.033812955021858215
+****************************************************
+************* epoch  35 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.08083297312259674
+loss function at mini-batch iteration 10 : 0.05115330219268799
+loss function at mini-batch iteration 20 : 0.029726164415478706
+loss function at mini-batch iteration 30 : 0.023642688989639282
+loss function at mini-batch iteration 40 : 0.0269450806081295
+loss function at mini-batch iteration 50 : 0.2026529312133789
+mean loss: 1.8441303968429565
+***************************
+********* Validate ************
+***************************
+mean loss: 0.06402914971113205
+****************************************************
+************* epoch  36 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0251171812415123
+loss function at mini-batch iteration 10 : 0.07360082119703293
+loss function at mini-batch iteration 20 : 0.06202651560306549
+loss function at mini-batch iteration 30 : 0.08104870468378067
+loss function at mini-batch iteration 40 : 0.06920842081308365
+loss function at mini-batch iteration 50 : 0.056864723563194275
+mean loss: 1.9886475801467896
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03266160562634468
+****************************************************
+************* epoch  37 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.044040389358997345
+loss function at mini-batch iteration 10 : 0.18108981847763062
+loss function at mini-batch iteration 20 : 0.0748070701956749
+loss function at mini-batch iteration 30 : 0.05483488366007805
+loss function at mini-batch iteration 40 : 0.03804996609687805
+loss function at mini-batch iteration 50 : 0.034768883138895035
+mean loss: 1.981921911239624
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04582386836409569
+****************************************************
+************* epoch  38 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.03317973390221596
+loss function at mini-batch iteration 10 : 0.05816897004842758
+loss function at mini-batch iteration 20 : 0.06848128885030746
+loss function at mini-batch iteration 30 : 0.09671138226985931
+loss function at mini-batch iteration 40 : 0.1876598298549652
+loss function at mini-batch iteration 50 : 0.08555499464273453
+mean loss: 2.9977006912231445
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03409910574555397
+****************************************************
+************* epoch  39 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.09872923791408539
+loss function at mini-batch iteration 10 : 0.09396053105592728
+loss function at mini-batch iteration 20 : 0.04677760228514671
+loss function at mini-batch iteration 30 : 0.06461172550916672
+loss function at mini-batch iteration 40 : 0.09229874610900879
+loss function at mini-batch iteration 50 : 0.05656719580292702
+mean loss: 2.372981548309326
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05847381055355072
+****************************************************
+************* epoch  40 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.045669861137866974
+loss function at mini-batch iteration 10 : 0.1821921467781067
+loss function at mini-batch iteration 20 : 0.12062008678913116
+loss function at mini-batch iteration 30 : 0.06969594955444336
+loss function at mini-batch iteration 40 : 0.04004184156656265
+loss function at mini-batch iteration 50 : 0.11941135674715042
+mean loss: 2.273364305496216
+***************************
+********* Validate ************
+***************************
+mean loss: 0.053728386759757996
+****************************************************
+************* epoch  41 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.07409608364105225
+loss function at mini-batch iteration 10 : 0.07000719010829926
+loss function at mini-batch iteration 20 : 0.031537145376205444
+loss function at mini-batch iteration 30 : 0.07727208733558655
+loss function at mini-batch iteration 40 : 0.10262585431337357
+loss function at mini-batch iteration 50 : 0.034487903118133545
+mean loss: 2.2715463638305664
+***************************
+********* Validate ************
+***************************
+mean loss: 0.07752774655818939
+****************************************************
+************* epoch  42 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.07176585495471954
+loss function at mini-batch iteration 10 : 0.036028891801834106
+loss function at mini-batch iteration 20 : 0.04759100824594498
+loss function at mini-batch iteration 30 : 0.040449872612953186
+loss function at mini-batch iteration 40 : 0.036917198449373245
+loss function at mini-batch iteration 50 : 0.0694367066025734
+mean loss: 1.6107679605484009
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04208851978182793
+****************************************************
+************* epoch  43 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.05677159130573273
+loss function at mini-batch iteration 10 : 0.046113789081573486
+loss function at mini-batch iteration 20 : 0.053207557648420334
+loss function at mini-batch iteration 30 : 0.1400671750307083
+loss function at mini-batch iteration 40 : 0.04920480400323868
+loss function at mini-batch iteration 50 : 0.054277874529361725
+mean loss: 1.7488665580749512
+***************************
+********* Validate ************
+***************************
+mean loss: 0.043884363025426865
+****************************************************
+************* epoch  44 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.029109695926308632
+loss function at mini-batch iteration 10 : 0.06467172503471375
+loss function at mini-batch iteration 20 : 0.14990603923797607
+loss function at mini-batch iteration 30 : 0.050369761884212494
+loss function at mini-batch iteration 40 : 0.08965668082237244
+loss function at mini-batch iteration 50 : 0.02900467813014984
+mean loss: 1.80937659740448
+***************************
+********* Validate ************
+***************************
+mean loss: 0.08458343893289566
+****************************************************
+************* epoch  45 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.05082225054502487
+loss function at mini-batch iteration 10 : 0.040618591010570526
+loss function at mini-batch iteration 20 : 0.1091344878077507
+loss function at mini-batch iteration 30 : 0.04580565541982651
+loss function at mini-batch iteration 40 : 0.03267165273427963
+loss function at mini-batch iteration 50 : 0.030657978728413582
+mean loss: 1.7460095882415771
+***************************
+********* Validate ************
+***************************
+mean loss: 0.049178123474121094
+****************************************************
+************* epoch  46 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.030236095190048218
+loss function at mini-batch iteration 10 : 0.02228771150112152
+loss function at mini-batch iteration 20 : 0.07029518485069275
+loss function at mini-batch iteration 30 : 0.14121019840240479
+loss function at mini-batch iteration 40 : 0.033903755247592926
+loss function at mini-batch iteration 50 : 0.048871882259845734
+mean loss: 1.7519761323928833
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04178811237215996
+****************************************************
+************* epoch  47 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.030694834887981415
+loss function at mini-batch iteration 10 : 0.03499773517251015
+loss function at mini-batch iteration 20 : 0.05393392592668533
+loss function at mini-batch iteration 30 : 0.03444640338420868
+loss function at mini-batch iteration 40 : 0.0784713476896286
+loss function at mini-batch iteration 50 : 0.04422830045223236
+mean loss: 1.4536174535751343
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03620696812868118
+****************************************************
+************* epoch  48 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.023905780166387558
+loss function at mini-batch iteration 10 : 0.017497070133686066
+loss function at mini-batch iteration 20 : 0.04162280634045601
+loss function at mini-batch iteration 30 : 0.11899476498365402
+loss function at mini-batch iteration 40 : 0.0639268159866333
+loss function at mini-batch iteration 50 : 0.13593992590904236
+mean loss: 1.4858750104904175
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04064355045557022
+****************************************************
+************* epoch  49 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.04575793445110321
+loss function at mini-batch iteration 10 : 0.022937681525945663
+loss function at mini-batch iteration 20 : 0.02878129854798317
+loss function at mini-batch iteration 30 : 0.02294909954071045
+loss function at mini-batch iteration 40 : 0.04045962914824486
+loss function at mini-batch iteration 50 : 0.040208008140325546
+mean loss: 1.644443154335022
+***************************
+********* Validate ************
+***************************
+mean loss: 0.038167551159858704
+****************************************************
+************* epoch  50 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.02971588261425495
+loss function at mini-batch iteration 10 : 0.05497486889362335
+loss function at mini-batch iteration 20 : 0.16874736547470093
+loss function at mini-batch iteration 30 : 0.04706256836652756
+loss function at mini-batch iteration 40 : 0.02753247506916523
+loss function at mini-batch iteration 50 : 0.09920681267976761
+mean loss: 2.3477299213409424
+***************************
+********* Validate ************
+***************************
+mean loss: 0.12139769643545151
+****************************************************
+************* epoch  51 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.08039551228284836
+loss function at mini-batch iteration 10 : 0.03445129096508026
+loss function at mini-batch iteration 20 : 0.05547807365655899
+loss function at mini-batch iteration 30 : 0.058782413601875305
+loss function at mini-batch iteration 40 : 0.11135631799697876
+loss function at mini-batch iteration 50 : 0.05240058898925781
+mean loss: 2.21319317817688
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05300974100828171
+****************************************************
+************* epoch  52 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.03286835551261902
+loss function at mini-batch iteration 10 : 0.045200929045677185
+loss function at mini-batch iteration 20 : 0.08625402301549911
+loss function at mini-batch iteration 30 : 0.06621517986059189
+loss function at mini-batch iteration 40 : 0.08566702902317047
+loss function at mini-batch iteration 50 : 0.052683062851428986
+mean loss: 2.0700013637542725
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04103966802358627
+****************************************************
+************* epoch  53 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.04964729771018028
+loss function at mini-batch iteration 10 : 0.046105336397886276
+loss function at mini-batch iteration 20 : 0.06318880617618561
+loss function at mini-batch iteration 30 : 0.040458910167217255
+loss function at mini-batch iteration 40 : 0.05881555378437042
+loss function at mini-batch iteration 50 : 0.08308453857898712
+mean loss: 1.8697062730789185
+***************************
+********* Validate ************
+***************************
+mean loss: 0.06920922547578812
+****************************************************
+************* epoch  54 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.03444264829158783
+loss function at mini-batch iteration 10 : 0.057610802352428436
+loss function at mini-batch iteration 20 : 0.0769798755645752
+loss function at mini-batch iteration 30 : 0.02323233336210251
+loss function at mini-batch iteration 40 : 0.050698429346084595
+loss function at mini-batch iteration 50 : 0.06259453296661377
+mean loss: 2.203183889389038
+***************************
+********* Validate ************
+***************************
+mean loss: 0.08628147840499878
+****************************************************
+************* epoch  55 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.03519830480217934
+loss function at mini-batch iteration 10 : 0.03731507807970047
+loss function at mini-batch iteration 20 : 0.05920880287885666
+loss function at mini-batch iteration 30 : 0.04997056722640991
+loss function at mini-batch iteration 40 : 0.04841521009802818
+loss function at mini-batch iteration 50 : 0.07594415545463562
+mean loss: 2.2830750942230225
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05114525929093361
+****************************************************
+************* epoch  56 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.09257572889328003
+loss function at mini-batch iteration 10 : 0.036951810121536255
+loss function at mini-batch iteration 20 : 0.058560121804475784
+loss function at mini-batch iteration 30 : 0.061403170228004456
+loss function at mini-batch iteration 40 : 0.08189362287521362
+loss function at mini-batch iteration 50 : 0.07185634970664978
+mean loss: 1.9083529710769653
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05888321250677109
+****************************************************
+************* epoch  57 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.018678531050682068
+loss function at mini-batch iteration 10 : 0.06628043949604034
+loss function at mini-batch iteration 20 : 0.05721589922904968
+loss function at mini-batch iteration 30 : 0.08884158730506897
+loss function at mini-batch iteration 40 : 0.016766324639320374
+loss function at mini-batch iteration 50 : 0.02732962556183338
+mean loss: 1.728481650352478
+***************************
+********* Validate ************
+***************************
+mean loss: 0.05977452173829079
+****************************************************
+************* epoch  58 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.056544363498687744
+loss function at mini-batch iteration 10 : 0.06641855835914612
+loss function at mini-batch iteration 20 : 0.10124889761209488
+loss function at mini-batch iteration 30 : 0.028839703649282455
+loss function at mini-batch iteration 40 : 0.05649247765541077
+loss function at mini-batch iteration 50 : 0.027303609997034073
+mean loss: 1.6671762466430664
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04740586504340172
+****************************************************
+************* epoch  59 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.06788261234760284
+loss function at mini-batch iteration 10 : 0.03926414996385574
+loss function at mini-batch iteration 20 : 0.03587917238473892
+loss function at mini-batch iteration 30 : 0.05040711537003517
+loss function at mini-batch iteration 40 : 0.02431265078485012
+loss function at mini-batch iteration 50 : 0.038758471608161926
+mean loss: 1.496516227722168
+***************************
+********* Validate ************
+***************************
+mean loss: 0.04047101363539696
+****************************************************
+************* epoch  60 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.020242631435394287
+loss function at mini-batch iteration 10 : 0.02565809153020382
+loss function at mini-batch iteration 20 : 0.06444990634918213
+loss function at mini-batch iteration 30 : 0.06633981317281723
+loss function at mini-batch iteration 40 : 0.09701761603355408
+loss function at mini-batch iteration 50 : 0.055177561938762665
+mean loss: 1.5678136348724365
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03570529818534851
+****************************************************
+************* epoch  61 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.023044917732477188
+loss function at mini-batch iteration 10 : 0.061224065721035004
+loss function at mini-batch iteration 20 : 0.029904669150710106
+loss function at mini-batch iteration 30 : 0.03630983456969261
+loss function at mini-batch iteration 40 : 0.062029555439949036
+loss function at mini-batch iteration 50 : 0.018035147339105606
+mean loss: 1.370158076286316
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03379359841346741
+****************************************************
+************* epoch  62 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.051212914288043976
+loss function at mini-batch iteration 10 : 0.09571279585361481
+loss function at mini-batch iteration 20 : 0.030258173123002052
+loss function at mini-batch iteration 30 : 0.08320842683315277
+loss function at mini-batch iteration 40 : 0.05201927199959755
+loss function at mini-batch iteration 50 : 0.030976705253124237
+mean loss: 1.2167917490005493
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03797448053956032
+****************************************************
+************* epoch  63 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.050361067056655884
+loss function at mini-batch iteration 10 : 0.038967669010162354
+loss function at mini-batch iteration 20 : 0.049510907381772995
+loss function at mini-batch iteration 30 : 0.038103148341178894
+loss function at mini-batch iteration 40 : 0.06449607014656067
+loss function at mini-batch iteration 50 : 0.029804393649101257
+mean loss: 1.4695522785186768
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03166845440864563
+****************************************************
+************* epoch  64 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.027033831924200058
+loss function at mini-batch iteration 10 : 0.028166625648736954
+loss function at mini-batch iteration 20 : 0.05473677068948746
+loss function at mini-batch iteration 30 : 0.023358633741736412
+loss function at mini-batch iteration 40 : 0.09033875167369843
+loss function at mini-batch iteration 50 : 0.11107584089040756
+mean loss: 1.7008575201034546
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03432128205895424
+****************************************************
+************* epoch  65 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.029406053945422173
+loss function at mini-batch iteration 10 : 0.038848184049129486
+loss function at mini-batch iteration 20 : 0.030482450500130653
+loss function at mini-batch iteration 30 : 0.031644903123378754
+loss function at mini-batch iteration 40 : 0.03254329413175583
+loss function at mini-batch iteration 50 : 0.020095517858862877
+mean loss: 1.409911036491394
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03907924145460129
+****************************************************
+************* epoch  66 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0837499126791954
+loss function at mini-batch iteration 10 : 0.05249283090233803
+loss function at mini-batch iteration 20 : 0.04356197267770767
+loss function at mini-batch iteration 30 : 0.047806449234485626
+loss function at mini-batch iteration 40 : 0.05257711187005043
+loss function at mini-batch iteration 50 : 0.03220904618501663
+mean loss: 1.4466831684112549
+***************************
+********* Validate ************
+***************************
+mean loss: 0.03220164403319359
+****************************************************
+************* epoch  67 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 0.0981132835149765
+loss function at mini-batch iteration 10 : 0.10925176739692688
+loss function at mini-batch iteration 20 : 0.1262020617723465
+loss function at mini-batch iteration 30 : 0.03690510243177414
+loss function at mini-batch iteration 40 : 0.03866291418671608
+loss function at mini-batch iteration 50 : 0.02314995974302292
+mean loss: 1.4528613090515137
+***************************
+********* Validate ************
+***************************

@@ -1,0 +1,150 @@
+{'L2_reguralization': 0,
+ 'activation': 'relu',
+ 'alpha': 0.4,
+ 'amplitude_shift': 0.5,
+ 'batch_size': 32,
+ 'conv_layer_1_batchnorm': {'name': True},
+ 'conv_layer_1_channels_out': 32,
+ 'conv_layer_1_extras': 'name',
+ 'conv_layer_1_kernel_size': 4,
+ 'conv_layer_1_kernel_size_maxpool': 3,
+ 'conv_layer_1_strides': 1,
+ 'conv_layer_1_strides_maxpool': 2,
+ 'conv_layer_2_batchnorm': {'name': False},
+ 'conv_layer_2_channels_out': 64,
+ 'conv_layer_2_extras': 'name',
+ 'conv_layer_2_kernel_size': 4,
+ 'conv_layer_2_kernel_size_maxpool': 3,
+ 'conv_layer_2_strides': 2,
+ 'conv_layer_2_strides_maxpool': 2,
+ 'conv_layer_3_batchnorm': {'name': False},
+ 'conv_layer_3_channels_out': 8,
+ 'conv_layer_3_extras': 'name',
+ 'conv_layer_3_kernel_size': 4,
+ 'conv_layer_3_kernel_size_maxpool': 2,
+ 'conv_layer_3_strides': 1,
+ 'conv_layer_3_strides_maxpool': 1,
+ 'conv_layer_4_batchnorm': {'name': False},
+ 'conv_layer_4_channels_out': 256,
+ 'conv_layer_4_extras': 'name',
+ 'conv_layer_4_kernel_size': 5,
+ 'conv_layer_4_kernel_size_maxpool': 3,
+ 'conv_layer_4_strides': 2,
+ 'conv_layer_4_strides_maxpool': 2,
+ 'conv_layer_5_batchnorm': {'name': True},
+ 'conv_layer_5_channels_out': 256,
+ 'conv_layer_5_extras': 'name',
+ 'conv_layer_5_kernel_size': 4,
+ 'conv_layer_5_kernel_size_maxpool': 2,
+ 'conv_layer_5_strides': 2,
+ 'conv_layer_5_strides_maxpool': 1,
+ 'conv_layer_6_batchnorm': {'name': False},
+ 'conv_layer_6_channels_out': 256,
+ 'conv_layer_6_extras': 'name',
+ 'conv_layer_6_kernel_size': 3,
+ 'conv_layer_6_kernel_size_maxpool': 3,
+ 'conv_layer_6_strides': 2,
+ 'conv_layer_6_strides_maxpool': 1,
+ 'conv_layer_7_batchnorm': {'name': False},
+ 'conv_layer_7_channels_out': 8,
+ 'conv_layer_7_extras': 'name',
+ 'conv_layer_7_kernel_size': 4,
+ 'conv_layer_7_kernel_size_maxpool': 2,
+ 'conv_layer_7_strides': 1,
+ 'conv_layer_7_strides_maxpool': 1,
+ 'conv_layer_8_batchnorm': {'name': True},
+ 'conv_layer_8_channels_out': 128,
+ 'conv_layer_8_extras': 'name',
+ 'conv_layer_8_kernel_size': 2,
+ 'conv_layer_8_kernel_size_maxpool': 3,
+ 'conv_layer_8_strides': 2,
+ 'conv_layer_8_strides_maxpool': 1,
+ 'conv_layer_9_batchnorm': {'name': False},
+ 'conv_layer_9_channels_out': 4,
+ 'conv_layer_9_extras': 'name',
+ 'conv_layer_9_kernel_size': 3,
+ 'conv_layer_9_kernel_size_maxpool': 3,
+ 'conv_layer_9_strides': 2,
+ 'conv_layer_9_strides_maxpool': 2,
+ 'conv_order': True,
+ 'depthShift': 2.6,
+ 'depthShift_sigma': 0.8,
+ 'fc_layer_1_batchnorm': {'name': True},
+ 'fc_layer_1_extras': {'name': 'dropout', 'rate': 0.4853609126406153},
+ 'fc_layer_2_batchnorm': {'name': True},
+ 'fc_layer_2_extras': {'name': None},
+ 'fc_layer_3_batchnorm': {'name': True},
+ 'fc_layer_3_extras': {'name': None},
+ 'fc_layer_4_batchnorm': {'name': True},
+ 'fc_layer_4_extras': {'name': 'dropout', 'rate': 0.5430694454362267},
+ 'fc_layer_5_batchnorm': {'name': False},
+ 'fc_layer_5_extras': {'name': 'dropout', 'rate': 0.4345536297888637},
+ 'fc_layer_6_batchnorm': {'name': True},
+ 'fc_layer_6_extras': {'name': 'dropout', 'rate': 0.5623788320304374},
+ 'fc_layer_7_batchnorm': {'name': True},
+ 'fc_layer_7_extras': {'name': 'dropout', 'rate': 0.1990679240917643},
+ 'fc_layer_8_batchnorm': {'name': True},
+ 'fc_layer_8_extras': {'name': 'dropout', 'rate': 0.20916768471525574},
+ 'fc_layer_9_batchnorm': {'name': True},
+ 'fc_layer_9_extras': {'name': None},
+ 'init': 'standard',
+ 'input_size': 2000,
+ 'learnin_rate': 0.001,
+ 'margin': 0.1,
+ 'n_conv_layers': 5,
+ 'n_fc_layers': 8,
+ 'neurons': 1028,
+ 'numberOfShots': 4,
+ 'optimizer': 'Adam'}
+
+500
+Load data...
+Number of spectra in the data set 1388
+Number of spectra in the data set 493
+Done!
+
+cpu
+ParametricConvFCModel(
+  (seq_layers): ModuleDict(
+    (0): BatchNorm1d(5, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): Conv1d(5, 8, kernel_size=(4,), stride=(1,))
+    (2): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv1d(8, 32, kernel_size=(4,), stride=(2,))
+    (4): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv1d(32, 64, kernel_size=(4,), stride=(1,))
+    (6): MaxPool1d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv1d(64, 256, kernel_size=(5,), stride=(2,))
+    (8): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv1d(256, 256, kernel_size=(4,), stride=(2,))
+    (11): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): MaxPool1d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+    (13): Dropout(p=0.4853609126406153, inplace=False)
+    (14): Linear(in_features=6912, out_features=1028, bias=True)
+    (15): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): Linear(in_features=1028, out_features=1028, bias=True)
+    (17): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): Linear(in_features=1028, out_features=1028, bias=True)
+    (19): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (20): Dropout(p=0.5430694454362267, inplace=False)
+    (21): Linear(in_features=1028, out_features=1028, bias=True)
+    (22): Dropout(p=0.4345536297888637, inplace=False)
+    (23): Linear(in_features=1028, out_features=1028, bias=True)
+    (24): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (25): Dropout(p=0.5623788320304374, inplace=False)
+    (26): Linear(in_features=1028, out_features=1028, bias=True)
+    (27): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (28): Dropout(p=0.1990679240917643, inplace=False)
+    (29): Linear(in_features=1028, out_features=1028, bias=True)
+    (30): BatchNorm1d(1028, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (31): Dropout(p=0.20916768471525574, inplace=False)
+    (32): Linear(in_features=1028, out_features=1028, bias=True)
+    (33): Linear(in_features=1028, out_features=1, bias=True)
+  )
+)
+****************************************************
+************* epoch  0 ***************************
+****************************************************
+loss function at mini-batch iteration 0 : 2.7454872131347656
+loss function at mini-batch iteration 8 : 1.3705158233642578
+loss function at mini-batch iteration 16 : 0.4595611095428467
