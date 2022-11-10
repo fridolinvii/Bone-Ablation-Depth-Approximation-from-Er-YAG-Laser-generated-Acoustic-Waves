@@ -1,5 +1,7 @@
 # Bone-Ablation Depth Approximation from Er-YAG Laser generated Acoustic Waves
 
+This is the code to the paper *Bone-Ablation Depth Approximation from Er-YAG Laser generated Acoustic Waves (IEEE Access 2022)*.
+
 The description of which transducer is used can be found in the folder transducer. We made measurment with for transducer, but for the paper we solely used one transducer. The details can be find under the name [Model_WSa_trans1](transducer/Model_WSa_trans1.pdf).
 
 The data was divided in 5 disjunct [subsets](code/bone_division.txt). Each folder in code, uses one of the divisions. 
