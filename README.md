@@ -25,4 +25,13 @@ We note, that the linear approximation is done in
 
 `linearApproximation.m`
 
-If you need the data, open an issue. We will give you a temporary link to download the data. 
+#### Data
+Please contact *Prof. Dr. Philippe C. Cattin* (philippe.cattin@unibas.ch) to access the data
+ 
+The all the RAW data (OCT and Acoustic)
+* https://dbe-lakefs.dbe.unibas.ch/repositories/depth-approximation-acoustic-oct/main
+
+Only Acoustic data used for training
+* https://dbe-lakefs.dbe.unibas.ch/repositories/depth-approximation-acoustic-oct/objects?ref=acoustic&path= (branch acoustic)
+* copy the folder `image_bearbeitet` into `fingerprinting/R3`
+* `cutter.m` has the different parameters for the preprocessing of the data
