@@ -33,5 +33,3 @@ The all the RAW data (OCT and Acoustic)
 
 Only Acoustic data used for training
 * https://dbe-lakefs.dbe.unibas.ch/repositories/depth-approximation-acoustic-oct/objects?ref=acoustic&path= (branch: *acoustic*)
-* copy the folder `image_bearbeitet` into `fingerprinting/R3`
-* `cutter.m` has the different parameters for the preprocessing of the data
